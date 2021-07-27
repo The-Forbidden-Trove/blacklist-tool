@@ -1,0 +1,23 @@
+{
+  "name": "tft-blacklist",
+  "version": "0.0.1",
+  "main": "app.js",
+  "productName": "TFT Blacklist",
+  "scripts": {
+    "start": "electron .",
+    "prebuild": "npm install && npm install --only=dev",
+    "build": "npx electron-packager . --icon views/tft.ico --overwrite"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "electron-overlay-window": "^2.0.1",
+    "jquery": "^3.6.0",
+    "sane": "^5.0.1",
+    "toastr": "^2.1.4",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-packager": "^15.3.0"
+  }
+}

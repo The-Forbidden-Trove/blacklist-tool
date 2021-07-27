@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TFT Blacklist - Settings</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/toastr/build/toastr.css">
+    <link rel="stylesheet" href="./settings.css">
+  </head>
+  <body>
+    <div id="menubar">
+      TFT Blacklist - Settings
+      <button id="button-close">X</button>
+    </div>
+    <div id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col col1">Client.txt File :</div>
+          <div class="col col2">
+            <input id="input-clienttxt-text" type="text" value="">
+            <input id="input-clienttxt-file" type="file" style="color: transparent;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col1">POE Window Title :</div>
+          <div class="col col2">
+            <input id="input-poe-window-title" type="text" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col1">Logging :</div>
+          <div class="col col2">
+            <input id="input-debug" type="checkbox" name="input-debug">
+            <label for="input-debug">Enable Debug</label>
+            <div class="note">will cause excessive log, only turn on for filing issue</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button id="button-save">Save</button>
+            <div class="note">Please restart application manually in order for the settings to take effect</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>window.$ = window.jquery = require('jquery');</script>
+    <script src="./settings.js"></script>
+  </body>
+</html>
