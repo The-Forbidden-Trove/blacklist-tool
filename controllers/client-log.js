@@ -100,7 +100,7 @@ module.exports = (eventEmitter) => {
             let ign = array[8].startsWith('<') ? array[9] : array[8];
             ign = ign.substr(0, ign.length - 1);
 
-            const isBlacklist = blacklist.includes(ign);
+            const isBlacklist = blacklist.includes(ign.toLowerCase());
 
             logger.debug(`IGN: ${ign}, Blacklist: ${isBlacklist}`);
 

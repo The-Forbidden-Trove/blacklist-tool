@@ -2,5 +2,7 @@ dev/
 dist/
 node_modules/
 
+TFT Blacklist-win32-x64/
+
 config.json
 tft-blacklist.log

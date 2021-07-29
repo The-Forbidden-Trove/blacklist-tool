@@ -13,11 +13,11 @@ module.exports = (eventEmitter) => {
     try {
       const response = await axios.get(BLACKLIST_URL);
 
-      const blacklist = response.data.split('\n');
+      const blacklist = response.data.toLowerCase().split('\n');
 
       if (BLACKLIST_IGN) {
         logger.debug(`BLACKLIST_IGN: ${BLACKLIST_IGN}`);
-        blacklist.push(BLACKLIST_IGN);
+        blacklist.push(BLACKLIST_IGN.toLowerCase());
       }
 
       eventEmitter.emit('app-blacklist-update', blacklist);
