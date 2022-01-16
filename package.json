@@ -9,7 +9,7 @@
     "build": "npx electron-packager . --icon views/tft.ico --overwrite"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.24.0",
     "electron-overlay-window": "^2.0.1",
     "jquery": "^3.6.0",
     "sane": "^5.0.1",
