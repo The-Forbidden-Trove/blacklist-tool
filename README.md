@@ -1,6 +1,6 @@
 # TFT Blacklist Tool
 
-A Client Tool to warn you when you engage with a TFT Blacklisted User.
+A Path of Exile 3rd Party Tool to warn you when you engage with a TFT Blacklisted User.
 
 ![blacklist tool showcase](/readme/blacklist-tool.gif)
 
