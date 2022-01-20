@@ -18,4 +18,8 @@ Currently available in Windows
 
 ## Feedback and Reports
 
-For bug reports and general feedback please use the `#💬tool-dev-chat` in [TFT Discord Server](https://discord.gg/EmGMejKK).
+For bug reports and general feedback please use the `#💬tool-dev-chat` ([link](https://discord.com/channels/645607528297922560/680796887259021342)) in our Discord Server
+
+## Join Our Discord
+
+[https://discord.gg/tftrove](https://discord.gg/tftrove)
