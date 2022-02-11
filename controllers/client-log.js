@@ -107,6 +107,20 @@ module.exports = (eventEmitter) => {
             if (isBlacklist) {
               eventEmitter.emit('app-notify-blacklist', ign);
             }
+
+          } else if (line.includes('님이 지역에 들어왔습니다.')) { // to support korean client
+
+            const array = line.split(' ');
+            const ign = array[8];
+
+            const isBlacklist = blacklist.includes(ign.toLowerCase());
+
+            logger.debug(`IGN: ${ign}, Blacklist: ${isBlacklist}`);
+
+            if (isBlacklist) {
+              eventEmitter.emit('app-notify-blacklist', ign);
+            }
+
           }
         });
     });
