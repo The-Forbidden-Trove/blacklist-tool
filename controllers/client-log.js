@@ -94,7 +94,8 @@ module.exports = (eventEmitter) => {
         .on('line', (line) => {
           logger.silly(`CLIENT.TXT ${line}`);
 
-          if (line.includes('] @From ') || line.includes('] @To ')) {
+          if (line.includes('] @From ') || line.includes('] @To ') ||
+              line.includes('] @От кого ') || line.includes('] @Кому ')) { // to support russian client
 
             const array = line.split(' ');
             let ign = array[8].startsWith('<') ? array[9] : array[8];
