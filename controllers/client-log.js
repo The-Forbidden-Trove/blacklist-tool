@@ -98,7 +98,8 @@ module.exports = (eventEmitter) => {
               line.includes('] @От кого ') || line.includes('] @Кому ')) { // to support russian client
 
             const array = line.split(' ');
-            let ign = array[8].startsWith('<') ? array[9] : array[8];
+            const pos = line.includes('] @От кого ') ? 9 : 8;
+            let ign = array[8].startsWith('<') ? array[pos + 1] : array[pos];
             ign = ign.substr(0, ign.length - 1);
 
             const isBlacklist = blacklist.includes(ign.toLowerCase());
