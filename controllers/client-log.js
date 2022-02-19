@@ -99,7 +99,7 @@ module.exports = (eventEmitter) => {
 
             const array = line.split(' ');
             const pos = line.includes('] @От кого ') ? 9 : 8;
-            let ign = array[8].startsWith('<') ? array[pos + 1] : array[pos];
+            let ign = array[pos].startsWith('<') ? array[pos + 1] : array[pos];
             ign = ign.substr(0, ign.length - 1);
 
             const isBlacklist = blacklist.includes(ign.toLowerCase());
