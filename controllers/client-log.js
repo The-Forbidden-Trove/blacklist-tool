@@ -73,7 +73,7 @@ module.exports = (eventEmitter) => {
 
   const [ dir, file ] = splitFilePath(CLIENTTXT_PATH);
 
-  sane(dir, { glob: file })
+  sane(dir, { glob: file, poll: true })
     .on('ready', () => {
       const message = `Listening to: ${CLIENTTXT_PATH}`;
       eventEmitter.emit('app-notify-success', message);
