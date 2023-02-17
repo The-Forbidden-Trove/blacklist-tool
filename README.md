@@ -24,4 +24,4 @@ For bug reports and general feedback please use the `#💬tool-dev-chat` ([link]
 
 ## Join Our Discord
 
-[https://discord.gg/tftrove](https://discord.gg/tftrove)
+[http://discord.tftrove.com](http://discord.tftrove.com)
