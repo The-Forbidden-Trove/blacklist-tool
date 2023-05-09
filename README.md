@@ -19,6 +19,7 @@ Currently available in Windows
 3. Setup client log filepath via Settings Page (right click Icon -> Settings) if necessary.
     - It will try to search for `Client.txt` via default installation path, and if it doesn't exist, you may have to setup manually
     - The file is located in your game installation path, in the logs folder
+    - Restart the app for the settings to take effect
 
 ## Feedback and Reports
 
