@@ -16,7 +16,9 @@ Currently available in Windows
 
 1. Unzip the zip file
 2. Run `TFT Blacklist.exe`
-3. Setup Client.log path in Settings Page (Right Click Icon -> Settings) if necessary.
+3. Setup client log filepath via Settings Page (right click Icon -> Settings) if necessary.
+    - It will try to search for `Client.txt` via default installation path, and if it doesn't exist, you may have to setup manually
+    - The file is located in your game installation path, in the logs folder
 
 ## Feedback and Reports
 
