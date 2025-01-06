@@ -5,13 +5,16 @@ const logger = require('../util/logger');
 const { BLACKLIST_IGN } = require('../util/config').getConfig();
 
 const BLACKLIST_URL = 'https://raw.githubusercontent.com/The-Forbidden-Trove/character_name_blacklist/main/blacklist.txt';
+const BLACKLIST_POE2_URL = 'https://raw.githubusercontent.com/The-Forbidden-Trove/character_name_blacklist/main/blacklist_poe2.txt';
 const BLACKLIST_UPDATE_INTERVAL = 1800000;
 
 module.exports = (eventEmitter) => {
 
   async function getBlacklist() {
     try {
-      const response = await axios.get(BLACKLIST_URL);
+      logger.debug(`Using ${process.env.poe2_mode === 'true' ? 'poe2' : 'poe1'} mode`)
+      const urlToUse = process.env.poe2_mode === 'true' ? BLACKLIST_POE2_URL : BLACKLIST_URL
+      const response = await axios.get(urlToUse);
 
       const blacklist = response.data.toLowerCase().split('\n');
 

@@ -5,11 +5,14 @@
   "productName": "TFT Blacklist",
   "scripts": {
     "start": "electron .",
+    "start-poe2": "cross-env poe2_mode=true electron .",
     "prebuild": "npm install && npm install --only=dev",
-    "build": "npx electron-packager . --icon views/tft.ico --overwrite"
+    "build": "echo process.env.poe2_mode = 'false'; > poever.js && electron-packager . --icon views/tft.ico --overwrite",
+    "build-poe2": "npm run prebuild && echo process.env.poe2_mode = 'true'; > poever.js && electron-packager . --icon views/tft.ico --overwrite"
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "cross-env": "^7.0.3",
     "electron-overlay-window": "^2.0.1",
     "jquery": "^3.6.0",
     "sane": "^5.0.1",
