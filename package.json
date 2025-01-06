@@ -8,7 +8,7 @@
     "start-poe2": "cross-env poe2_mode=true electron .",
     "prebuild": "npm install && npm install --only=dev",
     "build": "echo process.env.poe2_mode = 'false'; > poever.js && electron-packager . --icon views/tft.ico --overwrite",
-    "build-poe2": "npm run prebuild && echo process.env.poe2_mode = 'true'; > poever.js && electron-packager . --icon views/tft.ico --overwrite"
+    "build-poe2": "rimraf --glob 'TFT Blacklist-win32-x64/*' && npm run prebuild && echo process.env.poe2_mode = 'true'; > poever.js && electron-packager . TFT-Blacklist-poe2 --icon views/tft.ico --overwrite"
   },
   "dependencies": {
     "axios": "^0.24.0",
