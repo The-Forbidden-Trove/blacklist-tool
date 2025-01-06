@@ -1,5 +1,7 @@
 'use strict';
 
+require('./poever.js')
+
 const EventEmitter = require('events');
 
 require('./controllers/config');
